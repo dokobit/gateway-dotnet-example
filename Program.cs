@@ -318,6 +318,8 @@ namespace iSignGatewayNetExample
         /// <param name="args">Console arguments</param>
         static void Main(string[] args)
         {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
             /**
              * File name of document you want to sign.
              */
