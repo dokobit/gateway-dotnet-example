@@ -4,7 +4,7 @@
 
 Check more documentation at  [https://gateway-sandbox.isign.io/api/doc](https://gateway-sandbox.isign.io/api/doc).
 
-Request developer access token [here](https://www.isign.io/contacts#request-access).
+Request developer access token [here](https://www.isign.io/services/contacts#request-access).
 
 ## Example configuration
 - Enter API access token (accessToken) to Program.cs:21
