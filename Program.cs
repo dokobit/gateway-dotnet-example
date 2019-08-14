@@ -137,7 +137,7 @@ namespace iSignGatewayNetExample
         /// <returns>Received token or empty string</returns>
         public static string RequestUploadFile(string fileName, string fileUrl, string fileDigest)
         {
-            const string tag = "/api/upload.json";
+            const string tag = "/api/file/upload.json";
             WriteLine(tag, String.Format("Uploading file: {0}\n\tUrl: {1}", fileName, fileUrl));
 
             // Upload request
