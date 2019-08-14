@@ -22,10 +22,10 @@ namespace iSignGatewayNetExample
             public static string accessToken = "";
  
             // Api url
-            public static string apiUrl = "https://gateway-sandbox.isign.io";
+            public static string apiUrl = "https://gateway-sandbox.dokobit.com";
 
             // Callback urls
-            public static string callbaclkUrl = "http://localhost/gateway-php-example/signing-finished-postback.php";
+            public static string callbaclkUrl = "http://yourhost/gateway-php-example/signing-finished-postback.php";
         }
 
 
