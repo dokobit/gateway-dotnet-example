@@ -330,7 +330,7 @@ namespace iSignGatewayNetExample
              * Gateway API will download the file from given resource URL.
              * Ensure that file URL is accessible from internet.
              */
-            string fileUrl = "http://developers.isign.io/sc/test.pdf";
+            string fileUrl = "https://developers.dokobit.com/sc/test.pdf";
 
             /**
              * SHA1 digest of file content.
