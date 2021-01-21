@@ -12,13 +12,13 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace iSignGatewayNetExample
+namespace DokobitGatewayNetExample
 {
     class Program
     {
         public class Api
         {
-            //Enter Your iSign.io API access token
+            //Enter Your Dokobit Gateway API access token
             public static string accessToken = "";
  
             // Api url
@@ -206,7 +206,7 @@ namespace iSignGatewayNetExample
 
             if (response.Status != "uploaded")
             {
-                WriteLine(tag, "Gateway API could not download the file. Please ensure that file URL is accessible from the internet.\n");
+                WriteLine(tag, "Gateway could not download your file. Please ensure that file URL is accessible from the internet.\n");
             }
             else if (response != null)
             {
@@ -349,7 +349,7 @@ namespace iSignGatewayNetExample
 
             string command = args.Length > 0 ? args[0] : "demo";
             string token = args.Length > 1 ? args[1] : "some_token";
-            Console.WriteLine("iSign.io API signing gateway example.\n");
+            Console.WriteLine("Dokobit Gateway API .NET signing example.\n");
 
             switch (command)
             {

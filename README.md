@@ -10,13 +10,13 @@ Request developer access token [here](https://www.dokobit.com/developers/request
 - Enter API access token (accessToken) to Program.cs:21
 - Enter callback url (callbaclkUrl) to Program.cs:28
 
-Enter your file name, url and SHA1 digest in `Main` and update `CreateSigning` method with apropiate content values (or use testing ones provided).
+Enter your file name, url and SHA256 digest in `Main` and update `CreateSigning` method with apropiate content values (or use testing ones provided).
 
 Build project & Run.
 
 ## Console command
 
-To run this example, execute it like this: `isign_gateway_example {command} {token}` where `command` is:
+To run this example, execute it like this: `dokobit_gateway_example {command} {token}` where `command` is:
 * `upload_file` - Upload file and get `token` ([#api](https://gateway-sandbox.dokobit.com/api/doc#_api_upload))
 * `check_file_status` - Check file status (`token` required) ([#api](https://gateway-sandbox.dokobit.com/api/doc#_api_upload_status)) 
 * `create_signing` - Create new signing (`token` required) ([#api](https://gateway-sandbox.dokobit.com/api/doc#_api_signing_create))
