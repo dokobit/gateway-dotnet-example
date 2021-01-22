@@ -98,11 +98,11 @@ namespace DokobitGatewayNetExample
         }
 
         /// <summary>
-        /// Upload fileUrl with fileName and SHA1 fileDigest
+        /// Upload fileUrl with fileName and SHA256 fileDigest. Check documentation for uploading Base64 encoded file instead of fileUrl.
         /// </summary>
         /// <param name="fileName">File name</param>
         /// <param name="fileUrl">File remote url</param>
-        /// <param name="fileDigest">File SHA1 digest</param>
+        /// <param name="fileDigest">File SHA256 digest</param>
         /// <returns>Upload response object</returns>
         public static UploadResponse UploadFile(string fileName, string fileUrl, string fileDigest)
         {
@@ -133,7 +133,7 @@ namespace DokobitGatewayNetExample
         /// </summary>
         /// <param name="fileName">File name</param>
         /// <param name="fileUrl">File remote url</param>
-        /// <param name="fileDigest">File SHA1 digest</param>
+        /// <param name="fileDigest">File SHA256 digest</param>
         /// <returns>Received token or empty string</returns>
         public static string RequestUploadFile(string fileName, string fileUrl, string fileDigest)
         {
@@ -230,17 +230,19 @@ namespace DokobitGatewayNetExample
                     // Signing name. Will be displayed as the main title.
                     content.Add(new StringContent("Agreement"), "name");
 
-                    // Signer's unique identifier - personal code.
+                    // Unique user identifier from your system.
                     content.Add(new StringContent(signerUID), "signers[0][id]");
 
                     // Name
                     content.Add(new StringContent("Tester"), "signers[0][name]");       
                     // Surname
                     content.Add(new StringContent("Surname"), "signers[0][surname]");   
-                    // Phone number. Optional.
-                    content.Add(new StringContent("+37260000007"), "signers[0][phone]");
-                    // Personal code. Optional.
-                    content.Add(new StringContent("51001091072"), "signers[0][code]");
+                    // Phone number. Optional. If provided, will be prefilled in iframe for Mobile ID.
+                    content.Add(new StringContent("+37060000666"), "signers[0][phone]");
+                    // Personal code. Optional. If provided, will be prefilled for Smart-ID in iframe. Also, will not require entering manually for Mobile ID.
+                    content.Add(new StringContent("50001018865"), "signers[0][code]");
+                    // Country code. Required for signing with Smart-ID. Can also be used to preselect a country from a list in iframe dropdown for Smart-ID and Mobile ID.
+                    content.Add(new StringContent("LT"), "signers[0][country_code]");
                     // Signing purpose. Availabe options listed in documentation.
                     content.Add(new StringContent("signature"), "signers[0][signing_purpose]");   
                     
@@ -333,14 +335,14 @@ namespace DokobitGatewayNetExample
             string fileUrl = "https://developers.dokobit.com/sc/test.pdf";
 
             /**
-             * SHA1 digest of file content.
+             * SHA256 digest of file content.
              */
-            string fileDigest = "a50edb61f4bbdce166b752dbd3d3c434fb2de1ab";
+            string fileDigest = "2ef867b2b8016412bd91343c6ac6cfb5cb23b84841a3db37403742708c65326a";
 
             /*
              * Signer UID
              */
-            string signerUID = "51001091072";
+            string signerUID = "o880jxigih";
 
             /*
              * Example application logic
