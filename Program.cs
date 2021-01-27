@@ -230,7 +230,7 @@ namespace DokobitGatewayNetExample
                     // Signing name. Will be displayed as the main title.
                     content.Add(new StringContent("Agreement"), "name");
 
-                    // Unique user identifier from your system.
+                    // Unique user identifier in your system.
                     content.Add(new StringContent(signerUID), "signers[0][id]");
 
                     // Name
@@ -340,7 +340,7 @@ namespace DokobitGatewayNetExample
             string fileDigest = "2ef867b2b8016412bd91343c6ac6cfb5cb23b84841a3db37403742708c65326a";
 
             /*
-             * Signer UID
+             * Unique user identifier in your system.
              */
             string signerUID = "o880jxigih";
 
