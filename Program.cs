@@ -18,14 +18,14 @@ namespace DokobitGatewayNetExample
     {
         public class Api
         {
-            //Enter Your Dokobit Gateway API access token
+            //Enter Your Dokobit Documents Gateway access token
             public static string accessToken = "";
  
             // Api url
             public static string apiUrl = "https://gateway-sandbox.dokobit.com";
 
-            // Callback urls
-            public static string callbaclkUrl = "http://yourhost/gateway-php-example/signing-finished-postback.php";
+            // Your Postback url "https://your-public-host/gateway-dotnet-example/postback"
+            public static string callbaclkUrl = null;
         }
 
 
@@ -329,15 +329,15 @@ namespace DokobitGatewayNetExample
 
             /**
              * HTTP URL where the file is stored.
-             * Gateway API will download the file from given resource URL.
+             * Documents Gateway will download the file from given resource URL.
              * Ensure that file URL is accessible from internet.
              */
-            string fileUrl = "https://developers.dokobit.com/sc/test.pdf";
+            string fileUrl = "https://gateway-sandbox.dokobit.com/sc/test.pdf";
 
             /**
              * SHA256 digest of file content.
              */
-            string fileDigest = "2ef867b2b8016412bd91343c6ac6cfb5cb23b84841a3db37403742708c65326a";
+            string fileDigest = "1d879e6248e4dc553b286fc5f81dc52bf841ead031287228548551a70cf06560";
 
             /*
              * Unique user identifier in your system.
@@ -351,7 +351,7 @@ namespace DokobitGatewayNetExample
 
             string command = args.Length > 0 ? args[0] : "demo";
             string token = args.Length > 1 ? args[1] : "some_token";
-            Console.WriteLine("Dokobit Gateway API .NET signing example.\n");
+            Console.WriteLine("Dokobit Documents Gateway .NET signing example.\n");
 
             switch (command)
             {
