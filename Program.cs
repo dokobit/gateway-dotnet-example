@@ -24,8 +24,8 @@ namespace DokobitGatewayNetExample
             // Api url
             public static string apiUrl = "https://gateway-sandbox.dokobit.com";
 
-            // Your Postback url "https://your-public-host/gateway-dotnet-example/postback"
-            public static string callbaclkUrl = null;
+            // Your Postback url
+            public static string callbaclkUrl = "https://your-public-host/gateway-dotnet-example/postback";
         }
 
 
