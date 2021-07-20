@@ -61,7 +61,7 @@ There are four types of postback calls:
 
 After each signature, a request to the specified endpoint with signer information and signed document will be made.
 
-#### Via JavaScript callback.
+#### Via JavaScript callback
 If you want to have JavaScript events, add its support by following the instructions [here](https://gateway-sandbox.dokobit.com/api/iframe-integration).
 
 After receiving "onSignSuccess" callback, you can request signing status from your backend by making GET request to [/api/signing/SIGNING_TOKEN/status.json](https://gateway-sandbox.dokobit.com/api/doc#_api_signing_status) and fetch signed document by using "file" parameter in the response.
