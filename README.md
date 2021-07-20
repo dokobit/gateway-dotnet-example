@@ -52,13 +52,16 @@ After successful signing, you have two ways to get the signed file.
 #### Via postback url
 Postback calls are trigered, if `callbaclkUrl` was set while creating signing.
 
-There are two types of postback calls:
-1. A signer has signed the document - `signer_signed`.
-2. A signing has been completed (all signers successfully signed) - `signing_completed`.
+There are four types of postback calls:
+
+1. `signer_signed` - after signer has signed document.
+2. `signing_completed` - after signing has been completed (all signers successfully signed).
+3. `signing_archived` - after document was archived (for signings with PADES-LTV and XADES-XL levels only).
+3. `signing_archive_failed` - after document couldn't be archived (for signings with PADES-LTV and XADES-XL levels only).
 
 After each signature, a request to the specified endpoint with signer information and signed document will be made.
 
-#### Via javascript callback.
-If you want to have Javascript events, add its support by following the instructions [here](https://gateway-sandbox.dokobit.com/api/iframe-integration).
+#### Via JavaScript callback.
+If you want to have JavaScript events, add its support by following the instructions [here](https://gateway-sandbox.dokobit.com/api/iframe-integration).
 
 After receiving "onSignSuccess" callback, you can request signing status from your backend by making GET request to [/api/signing/SIGNING_TOKEN/status.json](https://gateway-sandbox.dokobit.com/api/doc#_api_signing_status) and fetch signed document by using "file" parameter in the response.
