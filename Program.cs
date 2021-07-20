@@ -206,7 +206,7 @@ namespace DokobitGatewayNetExample
 
             if (response.Status != "uploaded")
             {
-                WriteLine(tag, "Gateway could not download your file. Please ensure that file URL is accessible from the internet.\n");
+                WriteLine(tag, "Documents Gateway could not download your file. Please ensure that file URL is accessible from the internet.\n");
             }
             else if (response != null)
             {
