@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Dokobit-gateway-net-example")]
-[assembly: AssemblyDescription("Dokobit Gateway API .NET example")]
+[assembly: AssemblyDescription("Dokobit Documents Gateway .NET example")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dokobit, UAB")]
 [assembly: AssemblyProduct("Dokobit-gateway-net-example")]
