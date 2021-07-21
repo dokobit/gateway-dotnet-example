@@ -25,7 +25,7 @@ namespace DokobitGatewayNetExample
             public static string apiUrl = "https://gateway-sandbox.dokobit.com";
 
             // Your Postback url
-            public static string callbaclkUrl = "https://your-public-host/gateway-dotnet-example/postback";
+            public static string postbackUrl = "https://your-public-host/gateway-dotnet-example/postback";
         }
 
 
@@ -280,7 +280,7 @@ namespace DokobitGatewayNetExample
             WriteLine(tag, "Creating new signing with token:");
             Console.WriteLine(token);
 
-            CreateSigningResponse response = CreateSigning(token, signerUID, Api.callbaclkUrl); ;
+            CreateSigningResponse response = CreateSigning(token, signerUID, Api.postbackUrl); ;
 
             printResponse(response, tag);
 
