@@ -50,14 +50,14 @@ Navigate to signing URL, sign document.
 ### Retrieving signed document
 After successful signing, you have two ways to get the signed file.
 #### Via postback url
-Postback calls are trigered, if `callbaclkUrl` was set while creating signing.
+Postback calls are trigered, if `postback_url` was set while creating signing.
 
 There are four types of postback calls:
 
 1. `signer_signed` - after signer has signed document.
 2. `signing_completed` - after signing has been completed (all signers successfully signed).
 3. `signing_archived` - after document was archived (for signings with PADES-LTV and XADES-XL levels only).
-3. `signing_archive_failed` - after document couldn't be archived (for signings with PADES-LTV and XADES-XL levels only).
+4. `signing_archive_failed` - after document couldn't be archived (for signings with PADES-LTV and XADES-XL levels only).
 
 After each signature, a request to the specified endpoint with signer information and signed document will be made.
 
