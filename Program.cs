@@ -337,7 +337,7 @@ namespace DokobitGatewayNetExample
             /**
              * SHA256 digest of file content.
              */
-            string fileDigest = "1d879e6248e4dc553b286fc5f81dc52bf841ead031287228548551a70cf06560";
+            string fileDigest = "6256a099cd2a3d3606acc86e7eacbdcf4cd067db3a1d46930d77886d96fd226e";
 
             /*
              * Unique user identifier in your system.
